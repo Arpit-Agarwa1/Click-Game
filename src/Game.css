@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
-/* Page background */
+/* PAGE BACKGROUND */
 body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   min-height: 100vh;
@@ -16,7 +16,15 @@ body {
   color: white;
 }
 
-/* Start & Game Over screens */
+/* MAIN CONTAINER WRAPPER */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BUTTONS */
 button {
   padding: 14px 28px;
   font-size: 18px;
@@ -34,29 +42,34 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Score & Time */
+/* SCORE & TIME */
 .score {
   font-size: 22px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  text-align: center;
 }
 
 h1 {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  text-align: center;
 }
 
-/* Game container */
+/* GAME BOX */
 .box {
-  width: 700px;
-  height: 500px;
-  border-radius: 12px;
+  width: 90vw;
+  max-width: 700px;
+  height: 60vh;
+  max-height: 500px;
   background: #111;
   border: 3px solid #00ff9d;
+  border-radius: 14px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
+  margin: auto;
 }
 
-/* Moving square */
+/* SQUARE */
 .square {
   width: 50px;
   height: 50px;
@@ -68,8 +81,39 @@ h1 {
   box-shadow: 0 0 15px rgba(255, 59, 59, 0.7);
 }
 
-/* Game over text */
-h1,
-h2 {
-  text-align: center;
+/* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+  button {
+    font-size: 16px;
+    padding: 12px 22px;
+  }
+
+  .square {
+    width: 40px;
+    height: 40px;
+  }
+
+  .box {
+    height: 55vh;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .score {
+    font-size: 18px;
+  }
+}
+
+/* VERY SMALL SCREENS */
+@media (max-width: 400px) {
+  .square {
+    width: 35px;
+    height: 35px;
+  }
+
+  .box {
+    height: 50vh;
+  }
 }
