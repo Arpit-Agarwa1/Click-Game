@@ -1,20 +1,75 @@
+/* Reset */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
+/* Page background */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Start & Game Over screens */
+button {
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #00ff9d;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #00cc7d;
+  transform: scale(1.05);
+}
+
+/* Score & Time */
+.score {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+/* Game container */
 .box {
   width: 700px;
   height: 500px;
-  border: 2px solid black;
+  border-radius: 12px;
+  background: #111;
+  border: 3px solid #00ff9d;
   position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
 }
 
+/* Moving square */
 .square {
   width: 50px;
   height: 50px;
-  background-color: red;
+  background: #ff3b3b;
+  border-radius: 6px;
   position: absolute;
   cursor: pointer;
+  transition: top 0.15s linear, left 0.15s linear;
+  box-shadow: 0 0 15px rgba(255, 59, 59, 0.7);
+}
+
+/* Game over text */
+h1,
+h2 {
+  text-align: center;
 }
